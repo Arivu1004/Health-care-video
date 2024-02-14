@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Video Player</title>
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Video Player</h1>
+    <div id="player"></div>
+  </div>
+  <video width="400" height="320" controls autoplay>
+    <source src="./Recording 2024-02-08 135024.mp4" type="video/mp4">
+  </video>
+  <script>
+     // This function creates an <iframe> (and YouTube player)
+    // after the API code downloads.
+    let player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '315',
+        width: '560',
+        videoId: 'PSaANYqTUVc', // Replace with your YouTube video ID
+        playerVars: {
+          'autoplay': 1,
+          'controls': 1,
+          'rel': 0,
+          'showinfo': 0,
+          'mute': 1 // Mute the video
+        }
+      });
+    }
+  </script>
+</body>
+</html>
